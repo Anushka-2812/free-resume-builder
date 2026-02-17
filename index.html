@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Free Resume Builder</h1>
+        <p>Create a professional resume. Download for free.</p>
+    </header>
+
+    <main class="container">
+        <!-- Form Section -->
+        <section class="form-section">
+            <h2>Enter Your Details</h2>
+
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Your full name">
+
+            <label>Email</label>
+            <input type="email" id="email" placeholder="your@email.com">
+
+            <label>Phone</label>
+            <input type="text" id="phone" placeholder="1234567890">
+
+            <label>Skills</label>
+            <textarea id="skills" placeholder="HTML, CSS, JavaScript"></textarea>
+
+            <label>Education</label>
+            <textarea id="education" placeholder="Degree, College, Year"></textarea>
+
+            <label>Experience</label>
+            <textarea id="experience" placeholder="Job role, Company, Duration"></textarea>
+            <label>Projects</label>
+            <textarea id="projects" placeholder="Project title – description, technologies used"></textarea>
+
+            <label>
+                <input type="checkbox" id="show-declaration">
+                Add Declaration
+            </label>
+            <textarea id="declaration-text" placeholder="Enter declaration text" style="display:none;">
+            I hereby will be highly obliged if recruited in kokan region.
+            </textarea>
+
+        </section>
+
+        <!-- Preview Section -->
+        <section class="preview-section">
+            <h2>Resume Preview</h2>
+            
+            
+            <div class="template-buttons">
+                
+                <button onclick="setTemplate('ats')">
+                ATS Classic <small>(Best for Govt & ATS)</small>
+                </button>
+
+                <button onclick="setTemplate('modern')">
+                Modern <small>(Best for Private Jobs)</small>
+                </button>
+
+                <button onclick="setTemplate('sidebar')">
+                Sidebar <small>(Best for Human Review)</small>
+                </button>
+
+                <button onclick="setTemplate('fresher')">
+                Fresher <small>(Students & Internships)</small>
+                </button>
+            </div>
+
+
+            <div class="resume ats" id="resume">
+
+                <div class="sidebar-left">
+                    <h1 id="preview-name">Your Name</h1>
+                    <p id="preview-contact">Email | Phone</p>
+
+                    <h3>Skills</h3>
+                    <p id="preview-skills"></p>
+                </div>
+
+                <div class="sidebar-right">
+                    <h3>Experience</h3>
+                    <p id="preview-experience"></p>
+
+                    <h3>Education</h3>
+                    <p id="preview-education"></p>
+                    <h3>Projects</h3>
+                    <p id="preview-projects"></p>
+
+
+                    <div id="declaration-section" style="display:none;">
+                        <h3>Declaration</h3>
+                        <p id="preview-declaration"></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button id="download-pdf">Download PDF</button>
+            <button id="download-word">Download Word</button>
+
+
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
