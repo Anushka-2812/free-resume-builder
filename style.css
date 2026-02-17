@@ -248,3 +248,26 @@ button:hover {
     background: #2563eb;
     color: #fff;
 }
+.hero {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #2563eb;
+    font-weight: 500;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #eee;
+}
